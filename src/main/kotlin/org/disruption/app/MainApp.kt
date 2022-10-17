@@ -1,6 +1,6 @@
 package org.disruption.app
 
-import E
+import
 import org.disruption.app.view.MainView
 import tornadofx.App;
 
