@@ -1,4 +1,4 @@
 [submodule "Extracted-RC"]
-	path =  src/main
+	path =  Extracted-RC
 	url = https://github.com/OpenFTC/Extracted-RC.git
 	branch = 8.0
