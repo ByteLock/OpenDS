@@ -10,7 +10,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import com.qualcomm.robotcore.util.ReadWriteFile;
 import com.qualcomm.robotcore.util.RobotLog;
-import com.qualcomm.robotcore.wifi.NetworkConnection;
+
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -18,8 +18,8 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannel;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.ApChannel;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.inspection.InspectionState;
 
 public class SoftApAssistant extends NetworkConnection {

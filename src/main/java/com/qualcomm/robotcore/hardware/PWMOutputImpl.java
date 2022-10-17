@@ -1,8 +1,7 @@
 package com.qualcomm.robotcore.hardware;
 
 import com.qualcomm.robotcore.C0705R;
-import com.qualcomm.robotcore.hardware.HardwareDevice;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class PWMOutputImpl implements PWMOutput {
     protected PWMOutputController controller;

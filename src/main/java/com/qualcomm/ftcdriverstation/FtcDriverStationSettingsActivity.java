@@ -15,10 +15,10 @@ import com.qualcomm.ftccommon.configuration.EditActivity;
 import com.qualcomm.robotcore.util.Device;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.wifi.NetworkType;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectDeviceNameManager;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
-import org.firstinspires.ftc.robotcore.internal.system.SystemProperties;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.network.WifiDirectDeviceNameManager;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.system.SystemProperties;
 
 public class FtcDriverStationSettingsActivity extends EditActivity {
     protected static final String CLIENT_CONNECTED = "CLIENT_CONNECTED";

@@ -5,7 +5,7 @@ import com.qualcomm.hardware.ams.AMSColorSensor;
 import com.qualcomm.hardware.ams.AMSColorSensorImpl;
 import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class AdafruitI2cColorSensor extends AMSColorSensorImpl {
     public AdafruitI2cColorSensor(I2cDeviceSynchSimple i2cDeviceSynchSimple) {

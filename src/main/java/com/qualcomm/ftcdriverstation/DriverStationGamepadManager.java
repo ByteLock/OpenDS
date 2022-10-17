@@ -9,7 +9,6 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.Toast;
 import com.qualcomm.ftccommon.SoundPlayer;
-import com.qualcomm.ftcdriverstation.GamepadIndicator;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.util.Device;
 import java.util.ArrayList;
@@ -23,9 +22,9 @@ import org.firstinspires.directgamepadaccess.core.NPlayerGamepadHelper;
 import org.firstinspires.directgamepadaccess.core.UsbGamepad;
 import org.firstinspires.directgamepadaccess.core.UsbGamepadControlSurfaces;
 import org.firstinspires.ftc.robotcore.internal.android.p009dx.p012io.Opcodes;
-import org.firstinspires.ftc.robotcore.internal.p013ui.GamepadUser;
-import org.firstinspires.ftc.robotcore.internal.p013ui.RobotCoreGamepadManager;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.ui.GamepadUser;
+import org.firstinspires.ftc.robotcore.ui.RobotCoreGamepadManager;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class DriverStationGamepadManager implements NPlayerGamepadHelper.Callback, RobotCoreGamepadManager, SharedPreferences.OnSharedPreferenceChangeListener {
     public static final int GAMEPAD_POSITION_USER_1 = 0;

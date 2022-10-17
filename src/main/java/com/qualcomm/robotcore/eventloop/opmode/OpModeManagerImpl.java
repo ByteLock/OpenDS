@@ -6,7 +6,6 @@ import android.os.Debug;
 import android.util.Log;
 import com.qualcomm.hardware.lynx.LynxServoController;
 import com.qualcomm.robotcore.eventloop.EventLoopManager;
-import com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier;
 import com.qualcomm.robotcore.exception.RobotCoreException;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
@@ -33,11 +32,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicReference;
 import org.firstinspires.ftc.robotcore.internal.android.dex.DexFormat;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
 import org.firstinspires.ftc.robotcore.internal.opmode.OpModeServices;
 import org.firstinspires.ftc.robotcore.internal.opmode.RegisteredOpModes;
-import org.firstinspires.ftc.robotcore.internal.p013ui.GamepadUser;
+import org.firstinspires.ftc.robotcore.ui.GamepadUser;
 import org.firstinspires.inspection.InspectionState;
 
 public class OpModeManagerImpl implements OpModeServices, OpModeManagerNotifier {

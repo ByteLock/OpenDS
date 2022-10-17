@@ -3,7 +3,7 @@ package com.qualcomm.robotcore.wifi;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pManager;
 import androidx.core.content.ContextCompat;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class WifiDirectAssistantAndroid10Extensions {
 

@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.C0705R;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.HashMap;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Misc;
 import org.firstinspires.ftc.robotcore.internal.usb.EmbeddedSerialNumber;
 import org.firstinspires.ftc.robotcore.internal.usb.FakeSerialNumber;
 import org.firstinspires.ftc.robotcore.internal.usb.LynxModuleSerialNumber;

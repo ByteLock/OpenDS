@@ -2,10 +2,8 @@ package com.qualcomm.robotcore.hardware;
 
 import com.qualcomm.hardware.lynx.LynxServoController;
 import com.qualcomm.robotcore.C0705R;
-import com.qualcomm.robotcore.hardware.HardwareDevice;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class ServoImpl implements Servo {
     protected ServoController controller;

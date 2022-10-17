@@ -8,21 +8,21 @@ import com.qualcomm.robotcore.hardware.configuration.LynxConstants;
 import com.qualcomm.robotcore.robocol.Command;
 import com.qualcomm.robotcore.util.Intents;
 import com.qualcomm.robotcore.util.RobotLog;
-import com.qualcomm.robotcore.wifi.NetworkConnection;
+
 import java.lang.reflect.InvocationTargetException;
 import org.firstinspires.ftc.robotcore.internal.hardware.android.AndroidBoard;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannel;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannelManager;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannelManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManager;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.InvalidNetworkSettingException;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.PasswordManager;
-import org.firstinspires.ftc.robotcore.internal.network.PasswordManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
-import org.firstinspires.ftc.robotcore.internal.p013ui.UILocation;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.ApChannel;
+import org.firstinspires.ftc.robotcore.network.ApChannelManager;
+import org.firstinspires.ftc.robotcore.network.ApChannelManagerFactory;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManager;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.network.InvalidNetworkSettingException;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.PasswordManager;
+import org.firstinspires.ftc.robotcore.network.PasswordManagerFactory;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.ui.UILocation;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class RobotControllerAccessPointAssistant extends AccessPointAssistant {
     private static final String TAG = "RobotControllerAccessPointAssistant";

@@ -1,6 +1,6 @@
 package org.disruption.app.view
 
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler
 import tornadofx.*
 import java.net.InetAddress
 import java.net.UnknownHostException

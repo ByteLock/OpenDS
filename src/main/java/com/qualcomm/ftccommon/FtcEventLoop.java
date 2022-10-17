@@ -3,7 +3,6 @@ package com.qualcomm.ftccommon;
 import android.app.Activity;
 import android.hardware.usb.UsbDevice;
 import androidx.core.p003os.EnvironmentCompat;
-import com.qualcomm.ftccommon.UpdateUI;
 import com.qualcomm.ftccommon.configuration.RobotConfigFile;
 import com.qualcomm.ftccommon.configuration.RobotConfigFileManager;
 import com.qualcomm.ftccommon.configuration.RobotConfigMap;
@@ -50,8 +49,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import org.firstinspires.ftc.robotcore.external.Consumer;
 import org.firstinspires.ftc.robotcore.internal.hardware.CachedLynxModulesInfo;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.xmlpull.v1.XmlPullParserException;
 
 public class FtcEventLoop extends FtcEventLoopBase {

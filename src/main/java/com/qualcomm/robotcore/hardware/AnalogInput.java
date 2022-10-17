@@ -1,10 +1,9 @@
 package com.qualcomm.robotcore.hardware;
 
 import com.qualcomm.robotcore.C0705R;
-import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.configuration.annotations.AnalogSensorType;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 @DeviceProperties(builtIn = true, name = "@string/configTypeAnalogInput", xmlTag = "AnalogInput")
 @AnalogSensorType

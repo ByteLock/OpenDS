@@ -18,11 +18,11 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.EnumSet;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ProgressParameters;
-import org.firstinspires.ftc.robotcore.internal.p013ui.UILocation;
-import org.firstinspires.ftc.robotcore.internal.system.AppAliveNotifier;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.SystemProperties;
+import org.firstinspires.ftc.robotcore.ui.ProgressParameters;
+import org.firstinspires.ftc.robotcore.ui.UILocation;
+import org.firstinspires.ftc.robotcore.system.AppAliveNotifier;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.SystemProperties;
 
 @I2cDeviceType
 @DeviceProperties(builtIn = true, description = "@string/lynx_embedded_imu_description", name = "@string/lynx_embedded_bhi260ap_imu_name", xmlTag = "ControlHubImuBHI260AP")

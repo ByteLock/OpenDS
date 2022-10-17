@@ -10,11 +10,11 @@ import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.ThreadPool;
 import com.qualcomm.robotcore.wifi.NetworkConnection;
 import org.firstinspires.ftc.ftccommon.external.RobotStateMonitor;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameListener;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkStatus;
-import org.firstinspires.ftc.robotcore.internal.network.PeerStatus;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.DeviceNameListener;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.network.NetworkStatus;
+import org.firstinspires.ftc.robotcore.network.PeerStatus;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.inspection.InspectionState;
 
 public class UpdateUI {

@@ -3,7 +3,7 @@ package com.qualcomm.robotcore.hardware.configuration;
 import android.os.Build;
 import com.qualcomm.robotcore.util.Device;
 import com.qualcomm.robotcore.util.SerialNumber;
-import org.firstinspires.ftc.robotcore.internal.system.SystemProperties;
+import org.firstinspires.ftc.robotcore.system.SystemProperties;
 
 public class LynxConstants {
     public static final int CH_EMBEDDED_MODULE_ADDRESS = 173;

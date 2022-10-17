@@ -24,10 +24,10 @@ import com.qualcomm.robotcore.util.RobotLog;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ThemedActivity;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.ui.ThemedActivity;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.inspection.InspectionState;
 
 public abstract class EditActivity extends ThemedActivity {

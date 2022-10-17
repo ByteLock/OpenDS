@@ -4,10 +4,10 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 import com.qualcomm.robotcore.util.RobotLog;
 import java.net.InetAddress;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannel;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.network.InvalidNetworkSettingException;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.ApChannel;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.InvalidNetworkSettingException;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public abstract class NetworkConnection {
     private static final int GHZ_24_BASE_FREQ = 2407;

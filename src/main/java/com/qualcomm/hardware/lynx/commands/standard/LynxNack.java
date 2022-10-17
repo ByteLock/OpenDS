@@ -3,7 +3,7 @@ package com.qualcomm.hardware.lynx.commands.standard;
 import com.qualcomm.hardware.lynx.LynxModuleIntf;
 import com.qualcomm.hardware.lynx.commands.LynxMessage;
 import com.qualcomm.robotcore.util.TypeConversion;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public class LynxNack extends LynxMessage {
     private int nackReasonCode;

@@ -8,10 +8,10 @@ import android.preference.PreferenceFragment;
 import android.widget.FrameLayout;
 import java.util.ArrayList;
 import org.firstinspires.directgamepadaccess.core.UsbGamepad;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.p013ui.BaseActivity;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.ui.BaseActivity;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
 import org.firstinspires.inspection.RcInspectionActivity;
 
 public class FtcDriverStationInspectionReportsActivity extends BaseActivity {

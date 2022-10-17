@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.hardware.configuration.annotations.AnalogSensorType;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
 import com.qualcomm.robotcore.util.Range;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 @DeviceProperties(builtIn = true, description = "@string/optical_distance_sensor_description", name = "@string/configTypeOpticalDistanceSensor", xmlTag = "OpticalDistanceSensor")
 @AnalogSensorType

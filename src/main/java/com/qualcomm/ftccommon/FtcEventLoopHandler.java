@@ -1,7 +1,6 @@
 package com.qualcomm.ftccommon;
 
 import android.content.Context;
-import com.qualcomm.ftccommon.UpdateUI;
 import com.qualcomm.ftccommon.configuration.USBScanManager;
 import com.qualcomm.hardware.HardwareFactory;
 import com.qualcomm.hardware.lynx.LynxUsbDevice;
@@ -30,8 +29,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.firstinspires.ftc.robotcore.external.function.Supplier;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
 import org.firstinspires.inspection.InspectionState;
 
 public class FtcEventLoopHandler implements BatteryChecker.BatteryWatcher {

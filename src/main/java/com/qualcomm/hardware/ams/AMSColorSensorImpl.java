@@ -1,6 +1,5 @@
 package com.qualcomm.hardware.ams;
 
-import com.qualcomm.hardware.ams.AMSColorSensor;
 import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.I2cAddr;
 import com.qualcomm.robotcore.hardware.I2cAddrConfig;
@@ -16,7 +15,7 @@ import com.qualcomm.robotcore.util.TypeConversion;
 import java.nio.ByteOrder;
 import java.util.concurrent.TimeUnit;
 import org.firstinspires.ftc.robotcore.internal.ftdi.FtConstants;
-import org.firstinspires.ftc.robotcore.internal.system.Deadline;
+import org.firstinspires.ftc.robotcore.system.Deadline;
 
 public abstract class AMSColorSensorImpl extends I2cDeviceSynchDeviceWithParameters<I2cDeviceSynchSimple, AMSColorSensor.Parameters> implements AMSColorSensor, I2cAddrConfig, Light {
     public static final String TAG = "AMSColorSensorImpl";

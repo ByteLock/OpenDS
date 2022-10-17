@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.util.Range;
 import java.nio.ByteOrder;
 import java.util.Locale;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class LynxI2cColorRangeSensor extends AMSColorSensorImpl implements DistanceSensor, OpticalDistanceSensor, ColorRangeSensor {
     protected static final double apiLevelMax = 1.0d;

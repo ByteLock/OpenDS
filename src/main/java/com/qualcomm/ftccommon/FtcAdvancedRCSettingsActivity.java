@@ -8,11 +8,11 @@ import android.widget.FrameLayout;
 import com.qualcomm.robotcore.hardware.configuration.LynxConstants;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.wifi.NetworkType;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ThemedActivity;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.ui.ThemedActivity;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
 import org.firstinspires.inspection.C1275R;
 
 public class FtcAdvancedRCSettingsActivity extends ThemedActivity {

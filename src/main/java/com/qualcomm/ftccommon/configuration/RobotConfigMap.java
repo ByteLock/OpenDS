@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Misc;
 
 public class RobotConfigMap implements Serializable {
     Map<SerialNumber, ControllerConfiguration> map;

@@ -2,13 +2,10 @@ package com.qualcomm.robotcore.hardware;
 
 import com.qualcomm.hardware.lynx.LynxServoController;
 import com.qualcomm.robotcore.C0705R;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.configuration.typecontainers.MotorConfigurationType;
 import com.qualcomm.robotcore.util.RobotLog;
 import org.firstinspires.ftc.robotcore.external.navigation.Rotation;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class DcMotorImpl implements DcMotor {
     protected DcMotorController controller;

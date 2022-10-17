@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.WeakHashMap;
 import org.firstinspires.ftc.robotcore.internal.files.LogOutputStream;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.Misc;
 import org.firstinspires.inspection.InspectionState;
 
 public class RobotLog {

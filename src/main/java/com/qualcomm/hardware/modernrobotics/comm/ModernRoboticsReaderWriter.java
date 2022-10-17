@@ -1,11 +1,10 @@
 package com.qualcomm.hardware.modernrobotics.comm;
 
-import com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram;
 import com.qualcomm.robotcore.hardware.usb.RobotUsbDevice;
 import com.qualcomm.robotcore.util.RobotLog;
 import java.util.concurrent.TimeUnit;
 import org.firstinspires.ftc.robotcore.internal.hardware.TimeWindow;
-import org.firstinspires.ftc.robotcore.internal.system.Deadline;
+import org.firstinspires.ftc.robotcore.system.Deadline;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbException;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbProtocolException;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbTimeoutException;

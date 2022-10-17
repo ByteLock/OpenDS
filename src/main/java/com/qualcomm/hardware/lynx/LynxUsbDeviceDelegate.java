@@ -12,9 +12,9 @@ import com.qualcomm.robotcore.hardware.usb.RobotUsbModule;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.SerialNumber;
 import org.firstinspires.ftc.robotcore.external.Consumer;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ProgressParameters;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.ui.ProgressParameters;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public class LynxUsbDeviceDelegate implements LynxUsbDevice, HardwareDeviceCloseOnTearDown {
     public static String TAG = "LynxUsb";

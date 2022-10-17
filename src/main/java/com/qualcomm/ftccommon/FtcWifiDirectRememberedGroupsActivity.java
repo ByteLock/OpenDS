@@ -15,16 +15,16 @@ import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.RecvLoopRunnable;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectAgent;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectGroupName;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectPersistentGroupManager;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ThemedActivity;
-import org.firstinspires.ftc.robotcore.internal.p013ui.UILocation;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.RecvLoopRunnable;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.network.WifiDirectAgent;
+import org.firstinspires.ftc.robotcore.network.WifiDirectGroupName;
+import org.firstinspires.ftc.robotcore.network.WifiDirectPersistentGroupManager;
+import org.firstinspires.ftc.robotcore.ui.ThemedActivity;
+import org.firstinspires.ftc.robotcore.ui.UILocation;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.inspection.C1275R;
 
 public class FtcWifiDirectRememberedGroupsActivity extends ThemedActivity {

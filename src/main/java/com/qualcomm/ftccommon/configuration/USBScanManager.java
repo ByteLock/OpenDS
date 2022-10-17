@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import org.firstinspires.ftc.robotcore.external.function.Supplier;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
 
 public class USBScanManager {
     public static final String TAG = "FtcConfigTag";

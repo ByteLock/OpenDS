@@ -8,12 +8,12 @@ import com.qualcomm.robotcore.util.RobotLog;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.firstinspires.ftc.robotcore.external.Consumer;
 import org.firstinspires.ftc.robotcore.internal.hardware.android.AndroidBoard;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ProgressParameters;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.ui.ProgressParameters;
 import org.firstinspires.ftc.robotcore.internal.stellaris.FlashLoaderManager;
 import org.firstinspires.ftc.robotcore.internal.stellaris.FlashLoaderProtocolException;
-import org.firstinspires.ftc.robotcore.internal.system.AppAliveNotifier;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppAliveNotifier;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbException;
 
 class LynxFirmwareUpdater {

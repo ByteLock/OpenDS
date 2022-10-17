@@ -3,12 +3,11 @@ package com.qualcomm.robotcore.robocol;
 import com.qualcomm.robotcore.C0705R;
 import com.qualcomm.robotcore.exception.RobotCoreException;
 import com.qualcomm.robotcore.exception.RobotProtocolException;
-import com.qualcomm.robotcore.robocol.RobocolParsable;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.TypeConversion;
 import java.nio.BufferOverflowException;
 import java.nio.ByteBuffer;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.threeten.p014bp.YearMonth;
 
 public class PeerDiscovery extends RobocolParsableBase {

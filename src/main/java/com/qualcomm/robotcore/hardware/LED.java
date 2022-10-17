@@ -1,11 +1,9 @@
 package com.qualcomm.robotcore.hardware;
 
 import com.qualcomm.robotcore.C0705R;
-import com.qualcomm.robotcore.hardware.DigitalChannel;
-import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DigitalIoDeviceType;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 @DigitalIoDeviceType
 @DeviceProperties(builtIn = true, description = "@string/led_description", name = "@string/configTypeLED", xmlTag = "Led")

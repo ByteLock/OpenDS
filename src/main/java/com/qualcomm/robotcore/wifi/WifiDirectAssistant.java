@@ -16,20 +16,19 @@ import androidx.core.content.ContextCompat;
 import com.qualcomm.robotcore.C0705R;
 import com.qualcomm.robotcore.util.Device;
 import com.qualcomm.robotcore.util.RobotLog;
-import com.qualcomm.robotcore.wifi.NetworkConnection;
-import com.qualcomm.robotcore.wifi.WifiDirectAssistantAndroid10Extensions;
+
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannel;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannelManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.InvalidNetworkSettingException;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectAgent;
-import org.firstinspires.ftc.robotcore.internal.network.WifiUtil;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.network.ApChannel;
+import org.firstinspires.ftc.robotcore.network.ApChannelManagerFactory;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.network.InvalidNetworkSettingException;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.WifiDirectAgent;
+import org.firstinspires.ftc.robotcore.network.WifiUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
 import org.firstinspires.inspection.InspectionState;
 
 public class WifiDirectAssistant extends NetworkConnection {

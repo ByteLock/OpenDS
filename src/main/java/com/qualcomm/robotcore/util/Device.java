@@ -4,10 +4,9 @@ import android.app.UiModeManager;
 import android.os.Build;
 import androidx.core.p003os.EnvironmentCompat;
 import com.qualcomm.robotcore.hardware.configuration.LynxConstants;
-import com.qualcomm.robotcore.util.RunShellCommand;
-import org.firstinspires.ftc.robotcore.internal.network.WifiUtil;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.SystemProperties;
+import org.firstinspires.ftc.robotcore.network.WifiUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.SystemProperties;
 import org.firstinspires.inspection.InspectionState;
 
 public final class Device {

@@ -13,13 +13,13 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import com.qualcomm.robotcore.util.RobotLog;
 import java.util.Arrays;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectChannelAndDescription;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectChannelChanger;
-import org.firstinspires.ftc.robotcore.internal.network.WifiUtil;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ThemedActivity;
-import org.firstinspires.ftc.robotcore.internal.p013ui.UILocation;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.network.WifiDirectChannelAndDescription;
+import org.firstinspires.ftc.robotcore.network.WifiDirectChannelChanger;
+import org.firstinspires.ftc.robotcore.network.WifiUtil;
+import org.firstinspires.ftc.robotcore.ui.ThemedActivity;
+import org.firstinspires.ftc.robotcore.ui.UILocation;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
 import org.firstinspires.inspection.C1275R;
 
 public class FtcWifiDirectChannelSelectorActivity extends ThemedActivity implements AdapterView.OnItemClickListener {

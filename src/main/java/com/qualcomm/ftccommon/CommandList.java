@@ -1,10 +1,9 @@
 package com.qualcomm.ftccommon;
 
-import com.qualcomm.ftccommon.SoundPlayer;
 import com.qualcomm.robotcore.util.SerialNumber;
 import java.util.ArrayList;
 import org.firstinspires.ftc.robotcore.internal.collections.SimpleGson;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
 
 public class CommandList extends RobotCoreCommandList {
     public static final String CMD_ACTIVATE_CONFIGURATION = "CMD_ACTIVATE_CONFIGURATION";

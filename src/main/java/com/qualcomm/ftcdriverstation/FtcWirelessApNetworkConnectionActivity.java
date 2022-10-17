@@ -14,10 +14,10 @@ import com.qualcomm.robotcore.util.Device;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.wifi.DriverStationAccessPointAssistant;
 import com.qualcomm.robotcore.wifi.NetworkConnection;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.RecvLoopRunnable;
-import org.firstinspires.ftc.robotcore.internal.p013ui.BaseActivity;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.RecvLoopRunnable;
+import org.firstinspires.ftc.robotcore.ui.BaseActivity;
 
 public class FtcWirelessApNetworkConnectionActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = "FtcWirelessApNetworkConnection";

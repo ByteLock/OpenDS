@@ -2,7 +2,6 @@ package com.qualcomm.hardware.lynx;
 
 import android.content.Context;
 import com.qualcomm.hardware.C0660R;
-import com.qualcomm.hardware.lynx.LynxModule;
 import com.qualcomm.hardware.lynx.commands.LynxCommand;
 import com.qualcomm.hardware.lynx.commands.core.LynxGetADCCommand;
 import com.qualcomm.hardware.lynx.commands.core.LynxGetADCResponse;
@@ -55,7 +54,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.UnnormalizedAngleUnit;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Misc;
 
 public class LynxDcMotorController extends LynxController implements DcMotorController, DcMotorControllerEx {
     protected static boolean DEBUG = false;

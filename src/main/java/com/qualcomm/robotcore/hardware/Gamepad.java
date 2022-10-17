@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.concurrent.ArrayBlockingQueue;
 import org.firstinspires.ftc.robotcore.internal.collections.EvictingBlockingQueue;
 import org.firstinspires.ftc.robotcore.internal.collections.SimpleGson;
-import org.firstinspires.ftc.robotcore.internal.p013ui.GamepadUser;
+import org.firstinspires.ftc.robotcore.ui.GamepadUser;
 
 public class Gamepad extends RobocolParsableBase {
     private static final short BUFFER_SIZE = 65;

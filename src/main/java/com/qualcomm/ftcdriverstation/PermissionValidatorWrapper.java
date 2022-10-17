@@ -6,8 +6,8 @@ import android.preference.PreferenceManager;
 import com.qualcomm.robotcore.util.Device;
 import java.util.ArrayList;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
-import org.firstinspires.ftc.robotcore.internal.system.PermissionValidatorActivity;
+import org.firstinspires.ftc.robotcore.system.Misc;
+import org.firstinspires.ftc.robotcore.system.PermissionValidatorActivity;
 
 public class PermissionValidatorWrapper extends PermissionValidatorActivity {
     private final String TAG = "PermissionValidatorWrapper";

@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.util.SerialNumber;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.firstinspires.ftc.robotcore.internal.p013ui.UILocation;
+import org.firstinspires.ftc.robotcore.ui.UILocation;
 
 public class EditUSBDeviceActivity extends EditActivity {
     protected ScannedDevices extraUSBDevices = new ScannedDevices();

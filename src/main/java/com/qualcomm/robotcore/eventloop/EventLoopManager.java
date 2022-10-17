@@ -2,7 +2,6 @@ package com.qualcomm.robotcore.eventloop;
 
 import android.content.Context;
 import com.qualcomm.hardware.lynx.LynxServoController;
-import com.qualcomm.robotcore.eventloop.SyncdDevice;
 import com.qualcomm.robotcore.eventloop.opmode.EventLoopManagerClient;
 import com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl;
 import com.qualcomm.robotcore.exception.RobotCoreException;
@@ -28,13 +27,13 @@ import java.util.concurrent.CancellationException;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.PeerStatusCallback;
-import org.firstinspires.ftc.robotcore.internal.network.RecvLoopRunnable;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.PeerStatusCallback;
+import org.firstinspires.ftc.robotcore.network.RecvLoopRunnable;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
 import org.firstinspires.ftc.robotcore.internal.opmode.OnBotJavaHelper;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.inspection.InspectionState;
 
 public class EventLoopManager implements RecvLoopRunnable.RecvLoopCallback, NetworkConnection.NetworkConnectionCallback, PeerStatusCallback, SyncdDevice.Manager {

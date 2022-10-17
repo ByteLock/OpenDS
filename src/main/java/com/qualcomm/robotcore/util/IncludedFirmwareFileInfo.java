@@ -1,8 +1,8 @@
 package com.qualcomm.robotcore.util;
 
 import java.io.File;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class IncludedFirmwareFileInfo {
     private static final String FILENAME = "REVHubFirmware_1_08_02.bin";

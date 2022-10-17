@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.IrSeekerSensor;
 import com.qualcomm.robotcore.hardware.usb.RobotUsbDevice;
 import com.qualcomm.robotcore.util.TypeConversion;
 import java.nio.ByteOrder;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class ModernRoboticsI2cIrSeekerSensorV3 extends I2cDeviceSynchDevice<I2cDeviceSynch> implements IrSeekerSensor, I2cAddrConfig {
     public static final I2cAddr ADDRESS_I2C_DEFAULT = I2cAddr.create8bit(56);

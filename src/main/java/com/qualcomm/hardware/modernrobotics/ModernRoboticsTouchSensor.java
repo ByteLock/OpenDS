@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.hardware.configuration.annotations.AnalogSensorType;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 @DeviceProperties(builtIn = true, description = "@string/mr_touch_sensor_description", name = "@string/configTypeMRTouchSensor", xmlTag = "ModernRoboticsAnalogTouchSensor")
 @AnalogSensorType

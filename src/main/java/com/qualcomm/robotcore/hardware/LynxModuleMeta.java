@@ -1,6 +1,6 @@
 package com.qualcomm.robotcore.hardware;
 
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Misc;
 
 public class LynxModuleMeta {
     protected volatile ImuType imuType;

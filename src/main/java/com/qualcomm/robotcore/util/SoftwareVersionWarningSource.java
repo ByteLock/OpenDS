@@ -8,9 +8,9 @@ import com.qualcomm.robotcore.hardware.configuration.LynxConstants;
 import com.qualcomm.robotcore.robocol.PeerDiscovery;
 import java.util.Arrays;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.PeerStatusCallback;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.PeerStatusCallback;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.threeten.p014bp.Year;
 import org.threeten.p014bp.YearMonth;
 

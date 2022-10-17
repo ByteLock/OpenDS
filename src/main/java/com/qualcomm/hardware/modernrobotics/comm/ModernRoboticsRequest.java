@@ -1,7 +1,6 @@
 package com.qualcomm.hardware.modernrobotics.comm;
 
-import com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public class ModernRoboticsRequest extends ModernRoboticsDatagram {
     public static final byte[] syncBytes = {85, -86};

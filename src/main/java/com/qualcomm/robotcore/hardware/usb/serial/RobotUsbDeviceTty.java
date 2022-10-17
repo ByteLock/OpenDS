@@ -11,7 +11,7 @@ import java.io.InterruptedIOException;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import org.firstinspires.ftc.robotcore.internal.hardware.TimeWindow;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbException;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbUnspecifiedException;
 import org.firstinspires.inspection.InspectionState;

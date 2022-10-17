@@ -4,14 +4,13 @@ import com.qualcomm.robotcore.robocol.Command
 import com.qualcomm.robotcore.robocol.PeerDiscoveryManager
 import com.qualcomm.robotcore.robocol.RobocolDatagramSocket
 import com.qualcomm.robotcore.util.ElapsedTime
-import org.firstinspires.ftc.robotcore.internal.network.RecvLoopRunnable
+import org.firstinspires.ftc.robotcore.network.RecvLoopRunnable
 import java.net.InetAddress
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import com.qualcomm.robotcore.util.RobotLog
 import com.qualcomm.robotcore.util.ThreadPool
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler
 import java.util.concurrent.TimeUnit
 
 
@@ -37,7 +36,11 @@ class SetupRunnable(private val rcAddress: InetAddress,
         socket!!.connect(rcAddress)
 
         recvLoopService = Executors.newFixedThreadPool(2)
-        recvLoopRunnable = RecvLoopRunnable(recvLoopCallback, socket!!, timeSinceLastRrcvPacket)
+        recvLoopRunnable = RecvLoopRunnable(
+            recvLoopCallback,
+            socket!!,
+            timeSinceLastRrcvPacket
+        )
         val commandProcessor = recvLoopRunnable!!.CommandProcessor()
         NetworkConnectionHandler.getInstance().setRecvLoopRunnable(recvLoopRunnable)
         recvLoopService!!.execute(commandProcessor)

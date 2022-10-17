@@ -26,9 +26,9 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
-import org.firstinspires.ftc.robotcore.internal.network.PreferenceRemoterDS;
-import org.firstinspires.ftc.robotcore.internal.p013ui.BaseActivity;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.PreferenceRemoterDS;
+import org.firstinspires.ftc.robotcore.ui.BaseActivity;
 import org.firstinspires.inspection.InspectionState;
 
 public class FtcPairNetworkConnectionActivity extends BaseActivity implements View.OnClickListener, NetworkConnection.NetworkConnectionCallback {

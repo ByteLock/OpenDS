@@ -3,10 +3,10 @@ package com.qualcomm.robotcore.wifi;
 import android.content.Context;
 import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiInfo;
-import com.qualcomm.robotcore.wifi.NetworkConnection;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectAgent;
+import org.firstinspires.ftc.robotcore.network.WifiDirectAgent;
 
 public abstract class AccessPointAssistant extends NetworkConnection {
     private static final String DEFAULT_TETHERING_IP_ADDR = "192.168.43.1";

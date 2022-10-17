@@ -8,8 +8,8 @@ import com.qualcomm.robotcore.hardware.PIDFCoefficients;
 import com.qualcomm.robotcore.hardware.configuration.annotations.ExpansionHubPIDFPositionParams;
 import com.qualcomm.robotcore.hardware.configuration.annotations.ExpansionHubPIDFVelocityParams;
 import java.io.Serializable;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Misc;
 
 public class ExpansionHubMotorControllerParamsState implements Serializable, Cloneable {
     @Expose

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public class LynxInterface {
     public static final int ERRONEOUS_COMMAND_NUMBER = 0;

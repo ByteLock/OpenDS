@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public class HardwareMap implements Iterable<HardwareDevice> {
     private static final String LOG_FORMAT = "%-50s %-30s %s";

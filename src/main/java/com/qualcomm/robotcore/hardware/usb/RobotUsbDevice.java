@@ -8,8 +8,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import org.firstinspires.ftc.robotcore.internal.hardware.TimeWindow;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Misc;
 import org.firstinspires.ftc.robotcore.internal.usb.exception.RobotUsbException;
 
 public interface RobotUsbDevice {

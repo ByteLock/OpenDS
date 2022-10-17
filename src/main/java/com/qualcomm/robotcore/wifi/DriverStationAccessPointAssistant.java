@@ -13,16 +13,16 @@ import android.net.wifi.WifiInfo;
 import com.qualcomm.robotcore.C0705R;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.ThreadPool;
-import com.qualcomm.robotcore.wifi.NetworkConnection;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import org.firstinspires.ftc.robotcore.internal.network.ApChannel;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.WifiUtil;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.network.ApChannel;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.WifiUtil;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
 import org.firstinspires.inspection.InspectionState;
 
 public class DriverStationAccessPointAssistant extends AccessPointAssistant {

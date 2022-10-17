@@ -13,8 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import org.firstinspires.ftc.robotcore.external.Predicate;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectAgent;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.network.WifiDirectAgent;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class ClassUtil {
     public static final String TAG = "ClassUtil";

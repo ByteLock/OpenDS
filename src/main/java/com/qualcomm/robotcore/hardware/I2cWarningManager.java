@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.util.GlobalWarningSource;
 import com.qualcomm.robotcore.util.RobotLog;
 import java.util.HashSet;
 import java.util.Iterator;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class I2cWarningManager implements GlobalWarningSource {
     private static final I2cWarningManager instance;

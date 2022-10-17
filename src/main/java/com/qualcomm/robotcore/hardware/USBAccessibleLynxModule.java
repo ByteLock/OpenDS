@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import com.qualcomm.robotcore.C0705R;
 import com.qualcomm.robotcore.util.SerialNumber;
 import org.firstinspires.ftc.robotcore.internal.hardware.CachedLynxModulesInfo;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.firstinspires.inspection.InspectionState;
 
 public final class USBAccessibleLynxModule {

@@ -5,12 +5,11 @@ import com.qualcomm.ftccommon.configuration.RobotConfigResFilter;
 import com.qualcomm.hardware.lynx.LynxModule;
 import com.qualcomm.robotcore.C0705R;
 import com.qualcomm.robotcore.hardware.DeviceManager;
-import com.qualcomm.robotcore.hardware.configuration.ConfigurationType;
 import com.qualcomm.robotcore.util.RobotLog;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public enum BuiltInConfigurationType implements ConfigurationType {
     GYRO("Gyro", ConfigurationType.DeviceFlavor.I2C),

@@ -1,12 +1,11 @@
 package com.qualcomm.robotcore.hardware.usb;
 
 import com.qualcomm.robotcore.hardware.DeviceManager;
-import com.qualcomm.robotcore.hardware.usb.RobotUsbDevice;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.SerialNumber;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public abstract class RobotUsbDeviceImplBase implements RobotUsbDevice {
     protected static final ConcurrentHashMap<SerialNumber, DeviceManager.UsbDeviceType> deviceTypes = new ConcurrentHashMap<>();

@@ -1,6 +1,5 @@
 package com.qualcomm.hardware.modernrobotics.comm;
 
-import com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram;
 import com.qualcomm.robotcore.hardware.DeviceManager;
 import com.qualcomm.robotcore.hardware.usb.RobotUsbDevice;
 import com.qualcomm.robotcore.util.RobotLog;
@@ -8,7 +7,7 @@ import com.qualcomm.robotcore.util.SerialNumber;
 import org.firstinspires.ftc.robotcore.internal.collections.CircularByteBuffer;
 import org.firstinspires.ftc.robotcore.internal.collections.MarkedItemQueue;
 import org.firstinspires.ftc.robotcore.internal.hardware.TimeWindow;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.Misc;
 import org.firstinspires.ftc.robotcore.internal.usb.UsbConstants;
 
 public class RobotUsbDevicePretendModernRobotics implements RobotUsbDevice {

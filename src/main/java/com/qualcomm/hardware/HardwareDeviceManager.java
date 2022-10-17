@@ -73,7 +73,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.robotcore.internal.camera.CameraManagerInternal;
 import org.firstinspires.ftc.robotcore.internal.hardware.UserNameable;
 import org.firstinspires.ftc.robotcore.internal.hardware.usb.ArmableUsbDevice;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 import org.firstinspires.ftc.robotcore.internal.usb.VendorProductSerialNumber;
 import org.firstinspires.inspection.InspectionState;
 

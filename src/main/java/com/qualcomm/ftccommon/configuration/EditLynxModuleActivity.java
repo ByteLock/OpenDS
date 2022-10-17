@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import com.qualcomm.ftccommon.C0470R;
 import com.qualcomm.ftccommon.CommandList;
-import com.qualcomm.ftccommon.configuration.EditActivity;
 import com.qualcomm.robotcore.hardware.ControlSystem;
 import com.qualcomm.robotcore.hardware.configuration.DeviceConfiguration;
 import com.qualcomm.robotcore.hardware.configuration.LynxI2cDeviceConfiguration;
@@ -17,7 +16,7 @@ import com.qualcomm.robotcore.hardware.configuration.LynxModuleConfiguration;
 import com.qualcomm.robotcore.robocol.Command;
 import com.qualcomm.robotcore.util.RobotLog;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Assert;
 
 public class EditLynxModuleActivity extends EditActivity {
     public static final RequestCode requestCode = RequestCode.EDIT_LYNX_MODULE;

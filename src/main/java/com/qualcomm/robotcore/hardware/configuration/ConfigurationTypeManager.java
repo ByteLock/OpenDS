@@ -6,7 +6,6 @@ import com.google.gson.typeadapters.RuntimeTypeAdapterFactory;
 import com.qualcomm.robotcore.hardware.ControlSystem;
 import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.configuration.ConfigurationType;
 import com.qualcomm.robotcore.hardware.configuration.annotations.AnalogSensorType;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DigitalIoDeviceType;
@@ -39,8 +38,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.firstinspires.ftc.robotcore.external.Predicate;
-import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
-import org.firstinspires.ftc.robotcore.internal.network.RobotCoreCommandList;
+import org.firstinspires.ftc.robotcore.network.NetworkConnectionHandler;
+import org.firstinspires.ftc.robotcore.network.RobotCoreCommandList;
 import org.firstinspires.ftc.robotcore.internal.opmode.ClassFilter;
 
 public final class ConfigurationTypeManager implements ClassFilter {

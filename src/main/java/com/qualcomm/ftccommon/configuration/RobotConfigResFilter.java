@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.firstinspires.ftc.robotcore.internal.opmode.ClassFilter;
 import org.firstinspires.ftc.robotcore.internal.opmode.OnBotJavaDeterminer;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 import org.xmlpull.v1.XmlPullParserException;
 
 public class RobotConfigResFilter implements ClassFilter {

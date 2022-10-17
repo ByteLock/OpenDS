@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.configuration.ServoFlavor;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
 import com.qualcomm.robotcore.hardware.configuration.annotations.ServoType;
 import com.qualcomm.robotcore.util.RobotLog;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 @DeviceProperties(builtIn = true, compatibleControlSystems = {ControlSystem.REV_HUB}, description = "@string/rev_blinkin_description", name = "@string/rev_blinkin_name", xmlTag = "RevBlinkinLedDriver")
 @ServoType(flavor = ServoFlavor.CUSTOM, usPulseLower = 500.0d, usPulseUpper = 2500.0d)

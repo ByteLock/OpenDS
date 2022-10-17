@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.robocol.Command;
 import com.qualcomm.robotcore.robocol.TelemetryMessage;
 import com.qualcomm.robotcore.util.SerialNumber;
 import java.util.concurrent.TimeUnit;
-import org.firstinspires.ftc.robotcore.internal.network.CallbackResult;
+import org.firstinspires.ftc.robotcore.network.CallbackResult;
 
 public interface EventLoop {
     public static final double TELEMETRY_DEFAULT_INTERVAL = Double.NaN;

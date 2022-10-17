@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
 
 public class BatteryChecker {
     protected static final int BATTERY_WARN_THRESHOLD = 30;

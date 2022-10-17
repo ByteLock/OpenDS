@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.widget.FrameLayout;
-import com.qualcomm.ftccommon.LaunchActivityConstantsList;
 import com.qualcomm.robotcore.util.RobotLog;
-import org.firstinspires.ftc.robotcore.internal.network.DeviceNameManagerFactory;
-import org.firstinspires.ftc.robotcore.internal.network.WifiDirectDeviceNameManager;
-import org.firstinspires.ftc.robotcore.internal.p013ui.ThemedActivity;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.PreferencesHelper;
+import org.firstinspires.ftc.robotcore.network.DeviceNameManagerFactory;
+import org.firstinspires.ftc.robotcore.network.WifiDirectDeviceNameManager;
+import org.firstinspires.ftc.robotcore.ui.ThemedActivity;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.PreferencesHelper;
 
 public class FtcRobotControllerSettingsActivity extends ThemedActivity {
     public String getTag() {

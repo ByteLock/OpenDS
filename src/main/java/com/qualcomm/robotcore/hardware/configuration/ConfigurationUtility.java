@@ -4,7 +4,6 @@ import com.qualcomm.robotcore.C0705R;
 import com.qualcomm.robotcore.hardware.DeviceManager;
 import com.qualcomm.robotcore.hardware.LynxModuleMeta;
 import com.qualcomm.robotcore.hardware.LynxModuleMetaList;
-import com.qualcomm.robotcore.hardware.configuration.ConfigurationType;
 import com.qualcomm.robotcore.hardware.configuration.typecontainers.I2cDeviceConfigurationType;
 import com.qualcomm.robotcore.hardware.configuration.typecontainers.MotorConfigurationType;
 import com.qualcomm.robotcore.hardware.configuration.typecontainers.ServoConfigurationType;
@@ -17,9 +16,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import org.firstinspires.ftc.robotcore.external.function.Supplier;
-import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.firstinspires.ftc.robotcore.internal.system.Assert;
-import org.firstinspires.ftc.robotcore.internal.system.Misc;
+import org.firstinspires.ftc.robotcore.system.AppUtil;
+import org.firstinspires.ftc.robotcore.system.Assert;
+import org.firstinspires.ftc.robotcore.system.Misc;
 
 public class ConfigurationUtility {
     public static final String TAG = "ConfigurationUtility";
