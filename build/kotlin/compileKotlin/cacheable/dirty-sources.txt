@@ -1,4 +1,0 @@
-C:\Users\dy0x8\IdeaProjects\DriverStation\src\main\java\org\disruption\app\MainApp.kt
-C:\Users\dy0x8\IdeaProjects\DriverStation\src\main\java\org\disruption\app\view\MainView.kt
-C:\Users\dy0x8\IdeaProjects\DriverStation\src\main\java\org\disruption\app\view\MainViewController.kt
-C:\Users\dy0x8\IdeaProjects\DriverStation\src\main\java\org\disruption\app\Styles.kt
