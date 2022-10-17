@@ -1,6 +1,3 @@
-[submodule "src/main/java/org/firstinspires/ftc/robotcore/Extracted-RC"]
-	path = src/main/java/org/firstinspires/ftc/robotcore/Extracted-RC
-	url = https://github.com/OpenFTC/Extracted-RC.git
 [submodule "Extracted-RC"]
-	path =  src/main/java/org/firstinspires/ftc/robotcore/Extracted-RC
+	path =  Extracted-RC
 	url = https://github.com/OpenFTC/Extracted-RC.git
