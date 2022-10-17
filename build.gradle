@@ -1,0 +1,46 @@
+
+
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.20'
+    id("org.openjfx.javafxplugin") version "0.0.7"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'no.tornado:tornadofx:1.7.20'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+javafx {
+    // will pull in transitive modules
+    modules("javafx.controls", "javafx.fxml") // replace with what you modules need
+
+    // another option is to use:
+    // modules = listOf("javafx.controls", "javafx.fxml")
+
+    version = "12.0.1" // or whatever version you're using
+}
