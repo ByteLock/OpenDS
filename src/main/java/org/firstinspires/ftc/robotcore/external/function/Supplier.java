@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2016 Robert Atkinson
+Copyright (c) 2017 Robert Atkinson
 
 All rights reserved.
 
@@ -30,19 +30,14 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
 TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-package com.qualcomm.robotcore.hardware;
+package org.firstinspires.ftc.robotcore.external.function;
 
 /**
- * Instances of this interface are sensors whose input is reported as a voltage level
- * to an analog to digital converter.
+ * Represents a supplier of results.
+ * There is no requirement that a new or distinct result be returned each time the supplier is invoked.
+ * This is a functional interface whose functional method is get().
  */
-public interface AnalogSensor
+public interface Supplier<T>
     {
-    /**
-    * Returns the sensor's current value as a raw voltage level. Note that for
-    * Returns the light level voltage as reported by the sensor. Note that returned values
-    * INCREASE as the light energy INCREASES.
-    * @return unscaled / unclipped voltage level reported by the device
-    */
-    double readRawVoltage();
+    T get();
     }
