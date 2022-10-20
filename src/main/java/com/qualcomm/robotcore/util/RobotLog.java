@@ -30,11 +30,6 @@
 
 package com.qualcomm.robotcore.util;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.os.Build;
-import android.util.Log;
-
 import com.qualcomm.robotcore.exception.RobotCoreException;
 
 import org.firstinspires.ftc.robotcore.internal.files.LogOutputStream;

@@ -30,18 +30,6 @@
 
 package org.firstinspires.ftc.robotcore.internal.network;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.net.wifi.ScanResult;
-import android.net.wifi.WifiManager;
-import android.net.wifi.p2p.WifiP2pDevice;
-import android.os.Looper;
-import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.qualcomm.robotcore.R;
 import com.qualcomm.robotcore.exception.RobotCoreException;
 import com.qualcomm.robotcore.exception.RobotProtocolException;
 import com.qualcomm.robotcore.robocol.Command;
@@ -88,27 +76,21 @@ public class NetworkConnectionHandler {
     //----------------------------------------------------------------------------------------------
     // State
     //----------------------------------------------------------------------------------------------
-
-    protected final WifiManager.WifiLock wifiLock = newWifiLock();
     protected volatile boolean setupNeeded = true;
-
-    protected Context context;
     protected final ElapsedTime lastRecvPacket = new ElapsedTime();
-    protected volatile @Nullable InetAddress remoteAddr;
+    protected volatile InetAddress remoteAddr;
     protected volatile RobocolDatagramSocket socket;
     protected ScheduledExecutorService sendLoopService = null;
     protected ScheduledFuture<?> sendLoopFuture;
     protected volatile NetworkSetupRunnable setupRunnable;
-    protected @Nullable String connectionOwner;
-    protected @Nullable String connectionOwnerPassword;
+    protected String connectionOwner;
+    protected String connectionOwnerPassword;
 
-    protected @Nullable NetworkConnection networkConnection = null;
+    protected NetworkConnection networkConnection = null;
     protected final NetworkConnectionCallbackChainer theNetworkConnectionCallback = new NetworkConnectionCallbackChainer();
     protected RecvLoopRunnable recvLoopRunnable;
     protected final RecvLoopCallbackChainer theRecvLoopCallback = new RecvLoopCallbackChainer();
     protected final Object callbackLock = new Object(); // paranoia more than reality, but better safe than sorry. Guards the..Callback vars
-
-    protected static WifiManager wifiManager = null;
 
     private boolean isPeerConnected = false;
     private final List<PeerStatusCallback> peerStatusCallbacks = new CopyOnWriteArrayList<>();
@@ -126,27 +108,13 @@ public class NetworkConnectionHandler {
     // Construction
     //----------------------------------------------------------------------------------------------
 
-    @SuppressLint("WifiManagerLeak") // We _are_ using the application Context, but Android Lint doesn't know that.
-    public static WifiManager getWifiManager() {
-        if (wifiManager == null) {
-            wifiManager = (WifiManager) AppUtil.getDefContext().getSystemService(Context.WIFI_SERVICE);
-        }
-        return wifiManager;
-    }
-
-    protected static WifiManager.WifiLock newWifiLock() {
-        WifiManager.WifiLock lock = getWifiManager().createWifiLock(WifiManager.WIFI_MODE_FULL_HIGH_PERF, "");
-        lock.setReferenceCounted(false);
-        return lock;
-    }
-
     /**
      * getNetworkType
      *
      * On the control hub we force the network type into wireless ap mode.  On any other device we'll
      * use the stored preference while defaulting to Wi-Fi Direct.
      */
-    public static NetworkType getNetworkType(Context context) {
+    public static NetworkType getNetworkType() {
 
         if (Device.isRevControlHub() == true) {
             return NetworkType.RCWIRELESSAP;
@@ -161,10 +129,9 @@ public class NetworkConnectionHandler {
      *
      * The driver station version.
      */
-    public void init(@NonNull NetworkType networkType, @NonNull String owner, @NonNull String password, @NonNull Context context, @NonNull RobotCoreGamepadManager gamepadManager) {
+    public void init(NetworkType networkType, String owner, String password, RobotCoreGamepadManager gamepadManager) {
         this.connectionOwner = owner;
         this.connectionOwnerPassword = password;
-        this.context = context;
         sendOnceRunnable.parameters.gamepadManager = gamepadManager;
 
         shutdown();
@@ -179,8 +146,7 @@ public class NetworkConnectionHandler {
      *
      * Init on the robot controller. This method is idempotent.
      */
-    public void init(@NonNull NetworkType networkType, @NonNull Context context) {
-        this.context = context;
+    public void init(NetworkType networkType) {
         initNetworkConnection(networkType);
     }
 
@@ -239,7 +205,7 @@ public class NetworkConnectionHandler {
         if (!networkConnection.isConnected()) networkConnection.discoverPotentialConnections();
     }
 
-    public void startConnection(@NonNull String owner, @NonNull String password) {
+    public void startConnection(String owner, String password) {
         connectionOwner = owner;
         connectionOwnerPassword = password;
         networkConnection.connect(connectionOwner, connectionOwnerPassword);
@@ -304,7 +270,6 @@ public class NetworkConnectionHandler {
 
     public void stop() {
         if (networkConnection != null) networkConnection.disable();
-        if (wifiLock.isHeld()) wifiLock.release();
     }
 
     public boolean connectingOrConnected() {
@@ -488,7 +453,7 @@ public class NetworkConnectionHandler {
 
         // Check if the packet indicates a rejection
         if (peerDiscovery.getPeerType() == PeerDiscovery.PeerType.NOT_CONNECTED_DUE_TO_PREEXISTING_CONNECTION) {
-            throw new RobotProtocolException(context.getString(R.string.anotherDsIsConnectedError));
+            throw new RobotProtocolException("Another Driver Station is already connected!");
         }
 
         lastRecvPacket.reset();
@@ -657,7 +622,7 @@ public class NetworkConnectionHandler {
         return networkConnection.getWifiChannel();
     }
 
-    public @Nullable InetAddress getCurrentPeerAddr() {
+    public InetAddress getCurrentPeerAddr() {
         return remoteAddr;
     }
 
@@ -668,13 +633,13 @@ public class NetworkConnectionHandler {
     // delegate.
     //----------------------------------------------------------------------------------------------
 
-    public void pushNetworkConnectionCallback(@Nullable NetworkConnection.NetworkConnectionCallback callback) {
+    public void pushNetworkConnectionCallback(NetworkConnection.NetworkConnectionCallback callback) {
         synchronized (callbackLock) {
             this.theNetworkConnectionCallback.push(callback);
         }
     }
 
-    public void removeNetworkConnectionCallback(@Nullable NetworkConnection.NetworkConnectionCallback callback) {
+    public void removeNetworkConnectionCallback(NetworkConnection.NetworkConnectionCallback callback) {
         synchronized (callbackLock) {
             this.theNetworkConnectionCallback.remove(callback);
         }
@@ -684,7 +649,7 @@ public class NetworkConnectionHandler {
 
         protected final CopyOnWriteArrayList<NetworkConnection.NetworkConnectionCallback> callbacks = new CopyOnWriteArrayList<NetworkConnection.NetworkConnectionCallback>();
 
-        void push(@Nullable NetworkConnection.NetworkConnectionCallback callback) {
+        void push(NetworkConnection.NetworkConnectionCallback callback) {
             synchronized (callbacks) {  // for uniqueness testing
                 remove(callback);
                 if (callback != null && !callbacks.contains(callback)) {
@@ -693,7 +658,7 @@ public class NetworkConnectionHandler {
             }
         }
 
-        void remove(@Nullable NetworkConnection.NetworkConnectionCallback callback) {
+        void remove(NetworkConnection.NetworkConnectionCallback callback) {
             synchronized (callbacks) {
                 if (callback != null) callbacks.remove(callback);
             }
@@ -710,13 +675,13 @@ public class NetworkConnectionHandler {
         }
     }
 
-    public void pushReceiveLoopCallback(@Nullable RecvLoopRunnable.RecvLoopCallback callback) {
+    public void pushReceiveLoopCallback(RecvLoopRunnable.RecvLoopCallback callback) {
         synchronized (callbackLock) {
             this.theRecvLoopCallback.push(callback);
         }
     }
 
-    public void removeReceiveLoopCallback(@Nullable RecvLoopRunnable.RecvLoopCallback callback) {
+    public void removeReceiveLoopCallback(RecvLoopRunnable.RecvLoopCallback callback) {
         synchronized (callbackLock) {
             this.theRecvLoopCallback.remove(callback);
         }
@@ -726,7 +691,7 @@ public class NetworkConnectionHandler {
 
         protected final CopyOnWriteArrayList<RecvLoopRunnable.RecvLoopCallback> callbacks = new CopyOnWriteArrayList<RecvLoopRunnable.RecvLoopCallback>();
 
-        void push(@Nullable RecvLoopRunnable.RecvLoopCallback callback) {
+        void push(RecvLoopRunnable.RecvLoopCallback callback) {
             synchronized (callbacks) {  // for uniqueness testing
                 remove(callback);
                 if (callback != null && !callbacks.contains(callback)) {
@@ -735,7 +700,7 @@ public class NetworkConnectionHandler {
             }
         }
 
-        void remove(@Nullable RecvLoopRunnable.RecvLoopCallback callback) {
+        void remove(RecvLoopRunnable.RecvLoopCallback callback) {
             synchronized (callbacks) {
                 if (callback != null) callbacks.remove(callback);
             }

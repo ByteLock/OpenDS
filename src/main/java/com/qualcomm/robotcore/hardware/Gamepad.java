@@ -30,8 +30,6 @@
 
 package com.qualcomm.robotcore.hardware;
 
-import android.os.SystemClock;
-
 import com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl;
 import com.qualcomm.robotcore.exception.RobotCoreException;
 import com.qualcomm.robotcore.robocol.RobocolParsable;
@@ -304,19 +302,8 @@ public class Gamepad extends RobocolParsableBase {
    */
   public volatile long timestamp = 0;
 
-  /**
-   * Sets the time at which this Gamepad last changed its state,
-   * in the {@link android.os.SystemClock#uptimeMillis} time base.
-   */
   public void setTimestamp(long timestamp) {
     this.timestamp = timestamp;
-  }
-
-  /**
-   * Refreshes the Gamepad's timestamp to be the current time.
-   */
-  public void refreshTimestamp() {
-    setTimestamp(SystemClock.uptimeMillis());
   }
 
   // private static values used for packaging the gamepad state into a byte array
