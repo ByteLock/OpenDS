@@ -30,59 +30,16 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
 TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-package org.firstinspires.ftc.robotcore.external.navigation;
-
-import androidx.annotation.Nullable;
+package org.firstinspires.ftc.robotcore.external.function;
 
 /**
- * Instances of {@link RelicRecoveryVuMark} represent the VuMarks used in the Relic Recovery
- * FTC competition of 2017-18.
+ * {@link ContinuationResult} is used as the mechanism by which a {@link Continuation} delivers
+ * its dispatched target.
+ *
+ * @see Continuation
  */
 @SuppressWarnings("WeakerAccess")
-public enum RelicRecoveryVuMark
+public interface ContinuationResult<T>
     {
-        UNKNOWN,
-        LEFT,
-        CENTER,
-        RIGHT;
-
-    public static RelicRecoveryVuMark from(@Nullable VuforiaTrackable trackable)
-        {
-        if (trackable != null)
-            {
-            return from(trackable.getListener());
-            }
-        return UNKNOWN;
-        }
-
-    public static RelicRecoveryVuMark from(@Nullable VuforiaTrackable.Listener listener)
-        {
-        if (listener instanceof VuforiaTrackableDefaultListener)
-            {
-            return from(((VuforiaTrackableDefaultListener)listener).getVuMarkInstanceId());
-            }
-        return UNKNOWN;
-        }
-
-    public static RelicRecoveryVuMark from(@Nullable VuMarkInstanceId instanceId)
-        {
-        RelicRecoveryVuMark result = UNKNOWN;
-        if (instanceId != null && instanceId.getType()==VuMarkInstanceId.Type.NUMERIC)
-            {
-            long value = instanceId.getNumericValue();
-            if (value==1)
-                {
-                result = LEFT;
-                }
-            else if (value==2)
-                {
-                result = CENTER;
-                }
-            else if (value==3)
-                {
-                result = RIGHT;
-                }
-            }
-        return result;
-        }
+    void handle(T t);
     }

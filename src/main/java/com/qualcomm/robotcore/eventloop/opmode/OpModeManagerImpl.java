@@ -31,6 +31,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
 package com.qualcomm.robotcore.eventloop.opmode;
 
+import android.app.Activity;
+import android.content.Context;
+import android.os.Debug;
+import android.util.Log;
+
 import com.qualcomm.robotcore.R;
 import com.qualcomm.robotcore.eventloop.EventLoopManager;
 import com.qualcomm.robotcore.exception.RobotCoreException;
@@ -124,6 +129,7 @@ public class OpModeManagerImpl implements OpModeServices, OpModeManagerNotifier 
   protected enum OpModeState { INIT, LOOPING }
 
   protected static int            matchNumber          = 0;
+  protected Context               context;
   protected String                activeOpModeName     = DEFAULT_OP_MODE_NAME;
   protected OpMode                activeOpMode         = DEFAULT_OP_MODE;
   protected String                queuedOpModeName     = DEFAULT_OP_MODE_NAME;
@@ -154,6 +160,7 @@ public class OpModeManagerImpl implements OpModeServices, OpModeManagerNotifier 
     // switch to the default op mode
     initActiveOpMode(DEFAULT_OP_MODE_NAME);
 
+    this.context = activity;
     synchronized (mapActivityToOpModeManager) {
       mapActivityToOpModeManager.put(activity, this);
       }
@@ -575,7 +582,7 @@ public class OpModeManagerImpl implements OpModeServices, OpModeManagerNotifier 
               dev.setThrowOnNetworkLockAcquisition(false);
             }
 
-            String message = String.format("OpMode is STUCK!", activeOpModeName, method);
+            String message = String.format(context.getString(R.string.errorOpModeStuck), activeOpModeName, method);
             errorWasSet = RobotLog.setGlobalErrorMsg(message);
             RobotLog.e(message);
 
@@ -646,7 +653,7 @@ public class OpModeManagerImpl implements OpModeServices, OpModeManagerNotifier 
             }
 
             // Wait a touch for message to be seen
-            AppUtil.getInstance().showToast(UILocation.BOTH, String.format("OpMode is Stuck", method));
+            AppUtil.getInstance().showToast(UILocation.BOTH, String.format(context.getString(R.string.toastOpModeStuck), method));
             Thread.sleep(1000);
 
             // Restart

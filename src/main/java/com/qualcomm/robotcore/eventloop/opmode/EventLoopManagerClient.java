@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package com.qualcomm.robotcore.eventloop.opmode;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 import com.qualcomm.robotcore.util.WebServer;
 import org.firstinspires.ftc.robotcore.internal.opmode.OnBotJavaHelper;
 
@@ -43,8 +43,7 @@ import org.firstinspires.ftc.robotcore.internal.opmode.OnBotJavaHelper;
 @SuppressWarnings("WearkAccess")
 public interface EventLoopManagerClient
     {
-    @NonNull
-    WebServer getWebServer();
+    @NotNull WebServer getWebServer();
 
     OnBotJavaHelper getOnBotJavaHelper();
     }

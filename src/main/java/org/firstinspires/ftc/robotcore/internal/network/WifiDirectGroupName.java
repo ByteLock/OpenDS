@@ -34,7 +34,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.firstinspires.ftc.robotcore.internal.network;
 
 import android.net.wifi.p2p.WifiP2pGroup;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.google.gson.reflect.TypeToken;
 
@@ -54,11 +54,11 @@ public class WifiDirectGroupName implements Comparable<WifiDirectGroupName>
     {
     protected String name;
 
-    public WifiDirectGroupName(@NonNull WifiP2pGroup group)
+    public WifiDirectGroupName(@NotNull WifiP2pGroup group)
         {
         this.name = group.getNetworkName();
         }
-    public WifiDirectGroupName(@NonNull String name)
+    public WifiDirectGroupName(@NotNull String name)
         {
         this.name = name;
         }

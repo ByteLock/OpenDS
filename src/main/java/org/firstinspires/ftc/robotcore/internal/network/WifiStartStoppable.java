@@ -34,7 +34,7 @@ package org.firstinspires.ftc.robotcore.internal.network;
 
 import android.content.Context;
 import android.net.wifi.p2p.WifiP2pManager;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.R;
 import com.qualcomm.robotcore.util.RobotLog;
@@ -71,7 +71,7 @@ public abstract class WifiStartStoppable
     private   boolean             completionSuccess           = true;
     private   Semaphore           completionSemaphore         = new Semaphore(0);
 
-    protected @NonNull ActionListenerFailure failureReason  = ActionListenerFailure.UNKNOWN;
+    protected @NotNull ActionListenerFailure failureReason  = ActionListenerFailure.UNKNOWN;
 
     //------------------------------------------------------------------------------------------
     // Construction

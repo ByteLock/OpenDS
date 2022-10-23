@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.util.Intents;
 import com.qualcomm.robotcore.util.RobotLog;
@@ -127,7 +127,7 @@ public final class ControlHubApChannelManager implements ApChannelManager
         }
 
         @Override
-        @NonNull
+        @NotNull
         protected ApChannel provideResult(int resultCode, Bundle resultData)
         {
             ApChannel receivedChannel = ApChannel.fromBandAndChannel(

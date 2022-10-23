@@ -32,8 +32,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 package com.qualcomm.robotcore.util;
 
 import android.hardware.usb.UsbDevice;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import android.text.TextUtils;
 
 import com.google.gson.TypeAdapter;
@@ -105,15 +105,15 @@ public abstract class SerialNumber implements Serializable {
     this.serialNumberString = serialNumberString;
   }
 
-  public static @NonNull SerialNumber createFake() {
+  public static @NotNull SerialNumber createFake() {
     return new FakeSerialNumber();
   }
 
-  public static @NonNull SerialNumber createEmbedded() {
+  public static @NotNull SerialNumber createEmbedded() {
     return new EmbeddedSerialNumber();
   }
 
-  public static @NonNull SerialNumber fromString(@Nullable String serialNumberString) {
+  public static @NotNull SerialNumber fromString(@Nullable String serialNumberString) {
     if (FakeSerialNumber.isLegacyFake(serialNumberString)) {
       return createFake();
     } else if (serialNumberString.startsWith(fakePrefix)) {

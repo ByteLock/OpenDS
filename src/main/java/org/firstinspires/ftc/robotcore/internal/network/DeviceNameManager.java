@@ -32,14 +32,14 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.network;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Manage device naming.
  */
 public interface DeviceNameManager {
-    @NonNull String getDeviceName();
-    void setDeviceName(@NonNull String deviceName, boolean sendChangeToSystem) throws InvalidNetworkSettingException;
+    @NotNull String getDeviceName();
+    void setDeviceName(@NotNull String deviceName, boolean sendChangeToSystem) throws InvalidNetworkSettingException;
     String resetDeviceName(boolean sendChangeToSystem);
     void initializeDeviceNameIfNecessary();
     void registerCallback(DeviceNameListener callback);

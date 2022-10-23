@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import com.qualcomm.robotcore.BuildConfig;
 import com.qualcomm.robotcore.R;
@@ -13,9 +13,9 @@ import com.qualcomm.robotcore.robocol.Heartbeat;
 import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
 import org.firstinspires.ftc.robotcore.internal.network.PeerStatusCallback;
 import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.threeten.bp.Instant;
-import org.threeten.bp.ZonedDateTime;
-import org.threeten.bp.temporal.ChronoUnit;
+import java.time.Instant;
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 
 /**
  * This class is only used on the Robot Controller

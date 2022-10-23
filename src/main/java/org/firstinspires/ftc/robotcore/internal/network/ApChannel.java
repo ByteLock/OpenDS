@@ -29,7 +29,7 @@
  */
 package org.firstinspires.ftc.robotcore.internal.network;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
@@ -115,7 +115,7 @@ public enum ApChannel {
     /**
      * Gets an ApChannel instance from an ApChannel enum value name
      */
-    @NonNull public static ApChannel fromName(String name) {
+    @NotNull public static ApChannel fromName(String name) {
         ApChannel value = Enum.valueOf(ApChannel.class, name);
         if (value == null) value = ApChannel.UNKNOWN;
         return value;
@@ -124,7 +124,7 @@ public enum ApChannel {
     /**
      * Gets an ApChannel instance from a band and channel
      */
-    @NonNull public static ApChannel fromBandAndChannel(int band, int channelNum) {
+    @NotNull public static ApChannel fromBandAndChannel(int band, int channelNum) {
         for (ApChannel channel : ApChannel.values()) {
             if (channel.band.androidInternalValue == band && channel.channelNum == channelNum) {
                 return channel;

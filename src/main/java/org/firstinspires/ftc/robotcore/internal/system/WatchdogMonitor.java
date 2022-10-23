@@ -32,12 +32,10 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.system;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.ThreadPool;
-
-import com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -272,7 +270,7 @@ public class WatchdogMonitor
             return callableResult;
             }
 
-        @Override public V get(long timeout, @NonNull TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException
+        @Override public V get(long timeout, @NotNull TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException
             {
             runner.await(timeout, unit);
             if (runner.executionException != null)

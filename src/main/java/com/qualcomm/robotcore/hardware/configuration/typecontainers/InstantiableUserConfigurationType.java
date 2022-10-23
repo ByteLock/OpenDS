@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package com.qualcomm.robotcore.hardware.configuration.typecontainers;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.hardware.HardwareDevice;
 import com.qualcomm.robotcore.hardware.configuration.ConstructorPrototype;
@@ -58,19 +58,19 @@ public abstract class InstantiableUserConfigurationType extends UserConfiguratio
     // Construction
     //----------------------------------------------------------------------------------------------
 
-    protected InstantiableUserConfigurationType(Class clazz, @NonNull DeviceFlavor flavor, @NonNull String xmlTag, ConstructorPrototype[] allowableConstructorPrototypes) {
+    protected InstantiableUserConfigurationType(Class clazz, @NotNull DeviceFlavor flavor, @NotNull String xmlTag, ConstructorPrototype[] allowableConstructorPrototypes) {
         super(clazz, flavor, xmlTag);
         this.clazz = clazz;
         this.constructors = findUsableConstructors(allowableConstructorPrototypes);
     }
 
     // used by gson
-    protected InstantiableUserConfigurationType(@NonNull DeviceFlavor flavor) {
+    protected InstantiableUserConfigurationType(@NotNull DeviceFlavor flavor) {
         super(flavor);
     }
 
     @Override
-    public void processAnnotation(@NonNull DeviceProperties deviceProperties) {
+    public void processAnnotation(@NotNull DeviceProperties deviceProperties) {
         super.processAnnotation(deviceProperties);
     }
 

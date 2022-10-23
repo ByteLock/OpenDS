@@ -36,10 +36,10 @@ import android.app.Activity;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import androidx.annotation.StringRes;
 
-import com.qualcomm.robotcore.R;
+import com.qualcomm.robotcore.R; // TODO (Sean) We need to deal with R (resources) and BuildConfig somehow.
 import com.qualcomm.robotcore.util.RobotLog;
 
 import org.firstinspires.ftc.robotcore.internal.system.AppUtil;

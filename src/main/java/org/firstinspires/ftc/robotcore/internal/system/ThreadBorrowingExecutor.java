@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.system;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.util.ThreadPool;
 
@@ -52,7 +52,7 @@ public class ThreadBorrowingExecutor implements Executor, ThreadPool.ThreadBorro
         this.delegate = executor;
         }
 
-    @Override public void execute(@NonNull Runnable command)
+    @Override public void execute(@NotNull Runnable command)
         {
         delegate.execute(command);
         }

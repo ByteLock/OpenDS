@@ -56,7 +56,7 @@ import org.firstinspires.ftc.robotcore.internal.system.Misc;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /*
  * A collection of useful Wi-Fi related utilities.
@@ -65,7 +65,7 @@ public class WifiUtil {
 
     private static final String NO_AP = "None";
     @SuppressWarnings("ConstantConditions")
-    @NonNull private static final WifiManager wifiManager = (WifiManager)AppUtil.getDefContext().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+    @NotNull private static final WifiManager wifiManager = (WifiManager)AppUtil.getDefContext().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
     public static final LocationManager locationManager = (LocationManager) AppUtil.getDefContext().getSystemService(Context.LOCATION_SERVICE);
     private static Boolean deviceSupports5Ghz = null;
     private static boolean showingLocationServicesDlg = false;

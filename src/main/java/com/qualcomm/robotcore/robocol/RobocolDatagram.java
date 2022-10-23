@@ -1,6 +1,6 @@
 package com.qualcomm.robotcore.robocol;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.exception.RobotCoreException;
 
@@ -46,7 +46,7 @@ public class RobocolDatagram {
     * Construct a RobocolDatagram from a RobocolParsable
     * @param message
     */
-   public RobocolDatagram(RobocolParsable message, @NonNull InetAddress destination) throws RobotCoreException {
+   public RobocolDatagram(RobocolParsable message, @NotNull InetAddress destination) throws RobotCoreException {
       byte[] data = message.toByteArrayForTransmission();
       packet = new DatagramPacket(data, data.length, destination, RobocolConfig.PORT_NUMBER);
    }

@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package com.qualcomm.robotcore.hardware.configuration.typecontainers;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.google.gson.annotations.Expose;
 import com.qualcomm.robotcore.hardware.ControlSystem;
@@ -61,23 +61,23 @@ public abstract class UserConfigurationType implements ConfigurationType, Serial
     //----------------------------------------------------------------------------------------------
     // State
     //----------------------------------------------------------------------------------------------
-    protected @Expose @NonNull     String name = ""; // TODO(Noah): Make private once we get rid of the deprecated annotations
+    protected @Expose @NotNull     String name = ""; // TODO(Noah): Make private once we get rid of the deprecated annotations
     protected @Expose String         description; // TODO(Noah): Make private once we get rid of the deprecated annotations
 
-    private @Expose @NonNull final DeviceFlavor flavor;
-    private @Expose @NonNull       String xmlTag;
+    private @Expose @NotNull final DeviceFlavor flavor;
+    private @Expose @NotNull       String xmlTag;
     private @Expose                String[] xmlTagAliases;
     private @Expose                boolean builtIn = false;
     private @Expose                boolean isOnBotJava;
     private @Expose                boolean isExternalLibraries;
-    private @Expose @NonNull       ControlSystem[] compatibleControlSystems = {REV_HUB};
+    private @Expose @NotNull       ControlSystem[] compatibleControlSystems = {REV_HUB};
     private @Expose                boolean isDeprecated;
 
     //----------------------------------------------------------------------------------------------
     // Construction
     //----------------------------------------------------------------------------------------------
 
-    public UserConfigurationType(Class clazz, @NonNull DeviceFlavor flavor, @NonNull String xmlTag)
+    public UserConfigurationType(Class clazz, @NotNull DeviceFlavor flavor, @NotNull String xmlTag)
         {
         this.flavor = flavor;
         this.xmlTag = xmlTag;
@@ -87,13 +87,13 @@ public abstract class UserConfigurationType implements ConfigurationType, Serial
         }
 
     // used by gson deserialization
-    protected UserConfigurationType(@NonNull DeviceFlavor flavor)
+    protected UserConfigurationType(@NotNull DeviceFlavor flavor)
         {
         this.flavor = flavor;
         this.xmlTag = "";
         }
 
-    public void processAnnotation(@NonNull DeviceProperties deviceProperties)
+    public void processAnnotation(@NotNull DeviceProperties deviceProperties)
         {
         description = ClassUtil.decodeStringRes(deviceProperties.description());
         builtIn = deviceProperties.builtIn();
@@ -163,12 +163,12 @@ public abstract class UserConfigurationType implements ConfigurationType, Serial
     //----------------------------------------------------------------------------------------------
 
     @Override
-    public @NonNull DeviceFlavor getDeviceFlavor()
+    public @NotNull DeviceFlavor getDeviceFlavor()
         {
         return this.flavor;
         }
 
-    public @NonNull String getName()
+    public @NotNull String getName()
         {
         return this.name;
         }
@@ -201,22 +201,22 @@ public abstract class UserConfigurationType implements ConfigurationType, Serial
     // ConfigurationType
     //----------------------------------------------------------------------------------------------
 
-    @Override @NonNull public String getDisplayName(DisplayNameFlavor flavor)
+    @Override @NotNull public String getDisplayName(DisplayNameFlavor flavor)
         {
         return this.name;
         }
 
-    @Override @NonNull public String getXmlTag()
+    @Override @NotNull public String getXmlTag()
         {
         return this.xmlTag;
         }
 
-    @Override @NonNull public String[] getXmlTagAliases()
+    @Override @NotNull public String[] getXmlTagAliases()
         {
         return xmlTagAliases;
         }
 
-    @Override @NonNull public DeviceManager.UsbDeviceType toUSBDeviceType()
+    @Override @NotNull public DeviceManager.UsbDeviceType toUSBDeviceType()
         {
         return DeviceManager.UsbDeviceType.FTDI_USB_UNKNOWN_DEVICE;
         }

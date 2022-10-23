@@ -32,11 +32,11 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.network;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class DegeneratePasswordManager implements PasswordManager {
     @Override
-    public void setPassword(@NonNull String password, boolean sendChangeToSystem) { }
+    public void setPassword(@NotNull String password, boolean sendChangeToSystem) { }
 
     @Override
     public String resetPassword(boolean sendChangeToSystem) {

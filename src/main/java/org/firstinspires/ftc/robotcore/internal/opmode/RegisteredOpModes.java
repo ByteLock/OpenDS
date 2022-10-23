@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.opmode;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import com.qualcomm.robotcore.R;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;

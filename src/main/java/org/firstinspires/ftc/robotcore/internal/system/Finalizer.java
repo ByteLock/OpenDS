@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.system;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Stack;
 
@@ -55,7 +55,7 @@ public class Finalizer
     static int cacheSizeMax = 50;   // a moderate estimate based on some limited perf analysis
     final static Stack<Finalizer> cache = new Stack<>();
 
-    static Finalizer forTarget(@NonNull Finalizable target)
+    static Finalizer forTarget(@NotNull Finalizable target)
         {
         synchronized (cache)
             {

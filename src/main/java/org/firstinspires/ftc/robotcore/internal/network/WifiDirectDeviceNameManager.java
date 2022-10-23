@@ -39,7 +39,7 @@ import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.R;
 import com.qualcomm.robotcore.util.ClassUtil;
@@ -172,7 +172,7 @@ public class WifiDirectDeviceNameManager extends WifiStartStoppable implements D
      * @return the name by which this device is publicly known (in the UI, on the network, etc)
      */
     @Override
-    public synchronized @NonNull String getDeviceName()
+    public synchronized @NotNull String getDeviceName()
         {
         initializeDeviceNameIfNecessary();
         return internalGetDeviceName();
@@ -185,7 +185,7 @@ public class WifiDirectDeviceNameManager extends WifiStartStoppable implements D
      * @param sendChangeToSystem whether or not we should tell Android to change the Wi-Fi Direct name
      */
     @Override
-    public synchronized void setDeviceName(@NonNull String deviceName, boolean sendChangeToSystem) throws InvalidNetworkSettingException {
+    public synchronized void setDeviceName(@NotNull String deviceName, boolean sendChangeToSystem) throws InvalidNetworkSettingException {
         if (!validDeviceName(deviceName))
             {
             throw new InvalidNetworkSettingException(String.format("Name \"%s\" does not conform to FIRST Tech Challenge naming rules", deviceName));
@@ -216,7 +216,7 @@ public class WifiDirectDeviceNameManager extends WifiStartStoppable implements D
     // Ex:
     //  first set of phones for a team;     9999-RC, 9999-DS
     //  next set of phones on team;         9999-B-RC, 9999-B-DS
-    public static boolean validDeviceName(@NonNull String deviceName)
+    public static boolean validDeviceName(@NotNull String deviceName)
         {
         return deviceName.matches("[a-zA-Z0-9]+(-[a-zA-Z])?-(?i)(DS|RC)");
         }
@@ -345,7 +345,7 @@ public class WifiDirectDeviceNameManager extends WifiStartStoppable implements D
         return preferencesHelper.readString(context.getString(R.string.pref_device_name), defaultMadeUpDeviceName);
         }
 
-    protected void internalSetDeviceName(@NonNull String deviceName)
+    protected void internalSetDeviceName(@NotNull String deviceName)
         {
         preferencesHelper.writeStringPrefIfDifferent(context.getString(R.string.pref_device_name), deviceName);
         }
@@ -407,7 +407,7 @@ public class WifiDirectDeviceNameManager extends WifiStartStoppable implements D
             }
         }
 
-    protected void internalRememberWifiDirectName(@NonNull String wifiDirectName)
+    protected void internalRememberWifiDirectName(@NotNull String wifiDirectName)
         {
         RobotLog.vv(TAG, "remembering wifiDirectName: %s...", wifiDirectName);
         synchronized (callbackLock)
@@ -493,7 +493,7 @@ public class WifiDirectDeviceNameManager extends WifiStartStoppable implements D
      * the asynchrony involved making the providing thereof not a trivial thing.
      * @param deviceName the new name for the device
      */
-    protected void setWifiDirectDeviceName(@NonNull final String deviceName)
+    protected void setWifiDirectDeviceName(@NotNull final String deviceName)
         {
         RobotLog.vv(TAG, "setWifiDirectDeviceName(%s)...", deviceName);
         synchronized (callbackLock)

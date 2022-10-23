@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import com.qualcomm.robotcore.BuildConfig;
 import com.qualcomm.robotcore.R;
@@ -14,8 +14,8 @@ import com.qualcomm.robotcore.robocol.PeerDiscovery;
 import org.firstinspires.ftc.robotcore.internal.network.NetworkConnectionHandler;
 import org.firstinspires.ftc.robotcore.internal.network.PeerStatusCallback;
 import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
-import org.threeten.bp.Year;
-import org.threeten.bp.YearMonth;
+import java.time.Year;
+import java.time.YearMonth;
 
 import java.util.Arrays;
 import java.util.List;

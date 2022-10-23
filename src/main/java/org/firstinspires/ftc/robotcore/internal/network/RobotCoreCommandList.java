@@ -32,8 +32,8 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.network;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import android.util.Base64;
 
 import com.qualcomm.robotcore.hardware.USBAccessibleLynxModule;
@@ -414,8 +414,8 @@ public class RobotCoreCommandList
     static public class TextToSpeech
         {
         private String text;
-        private @NonNull String languageCode;
-        private @NonNull String countryCode;
+        private @NotNull String languageCode;
+        private @NotNull String countryCode;
 
         public TextToSpeech(String text, @Nullable String languageCode, @Nullable String countryCode)
             {

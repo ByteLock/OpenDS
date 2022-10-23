@@ -45,7 +45,7 @@ import org.firstinspires.ftc.robotcore.internal.system.Deadline;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A class that will notify listeners when a phone is in motion.
@@ -60,7 +60,7 @@ public class MotionDetection implements SensorEventListener {
     private final static String TAG = "MotionDetection";
 
     @SuppressWarnings("ConstantConditions")
-    @NonNull private final SensorManager sensorManager = (SensorManager) AppUtil.getDefContext().getSystemService(Context.SENSOR_SERVICE);
+    @NotNull private final SensorManager sensorManager = (SensorManager) AppUtil.getDefContext().getSystemService(Context.SENSOR_SERVICE);
     private final double DEFAULT_DETECTION_THRESHOLD = 2.0;
     private final int DEFAULT_RATE_LIMIT_SECONDS = 1;
     private double detectionThreshold;

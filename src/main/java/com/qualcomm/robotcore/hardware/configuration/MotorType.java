@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package com.qualcomm.robotcore.hardware.configuration;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import org.firstinspires.ftc.robotcore.external.navigation.Rotation;
 
@@ -64,13 +64,13 @@ public @interface MotorType
      * is different than any other sensor type.
      * @return the XML tag to use for instances of the annotated sensor class
      */
-    @NonNull String xmlTag();
+    @NotNull String xmlTag();
 
     /**
      * Returns the name to use when describing the class in configuration user interfaces.
      * @return the name to use for this kind of motor in user interfaces
      */
-    @NonNull String name();
+    @NotNull String name();
 
     /**
      * Returns the number of encoder ticks per revolution of the output shaft of

@@ -1,7 +1,7 @@
 package org.firstinspires.ftc.robotcore.internal.network;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.qualcomm.robotcore.exception.RobotCoreException;
 import com.qualcomm.robotcore.robocol.Command;
@@ -79,7 +79,7 @@ public class RecvLoopRunnable implements Runnable {
     protected LinkedBlockingDeque<RobocolDatagram> packetsToProcess = new LinkedBlockingDeque<>();
     protected LinkedBlockingDeque<Command> commandsToProcess = new LinkedBlockingDeque<>();
 
-    public RecvLoopRunnable(RecvLoopCallback callback, @NonNull RobocolDatagramSocket socket, @Nullable ElapsedTime lastRecvPacket ) {
+    public RecvLoopRunnable(RecvLoopCallback callback, @NotNull RobocolDatagramSocket socket, @Nullable ElapsedTime lastRecvPacket ) {
         this.callback = callback;
         this.socket = socket;
         this.lastRecvPacket = lastRecvPacket;

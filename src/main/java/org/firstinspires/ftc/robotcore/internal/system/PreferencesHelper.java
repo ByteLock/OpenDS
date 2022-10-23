@@ -35,7 +35,7 @@ package org.firstinspires.ftc.robotcore.internal.system;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.util.RobotLog;
 
@@ -94,7 +94,7 @@ public class PreferencesHelper
         return sharedPreferences.getAll().get(prefName);
         }
 
-    public boolean writePrefIfDifferent(String prefName, @NonNull Object newValue)
+    public boolean writePrefIfDifferent(String prefName, @NotNull Object newValue)
         {
         if (newValue instanceof String)    return writeStringPrefIfDifferent(prefName, (String)newValue);
         if (newValue instanceof Boolean)   return writeBooleanPrefIfDifferent(prefName, (Boolean)newValue);
@@ -131,7 +131,7 @@ public class PreferencesHelper
                 .apply();
         }
 
-    public boolean writeStringPrefIfDifferent(String prefName, @NonNull String newValue)
+    public boolean writeStringPrefIfDifferent(String prefName, @NotNull String newValue)
         {
         Assert.assertNotNull(newValue);
         boolean changed = false;
@@ -148,7 +148,7 @@ public class PreferencesHelper
         return changed;
         }
 
-    public boolean writeStringSetPrefIfDifferent(String prefName, @NonNull Set<String> newValue)
+    public boolean writeStringSetPrefIfDifferent(String prefName, @NotNull Set<String> newValue)
         {
         Assert.assertNotNull(newValue);
         boolean changed = false;

@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package com.qualcomm.robotcore.util;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Instances of this interface can be registered with RobotLog as dynamic
@@ -40,7 +40,7 @@ import androidx.annotation.Nullable;
  *
  * @see RobotLog#registerGlobalWarningSource(GlobalWarningSource)
  */
-public interface GlobalWarningSource
+public interface GlobalWarningSource // lol i keep thinking this says "global warming source"
     {
     /**
      * Returns the current warning associated with this warning source. If the source currently

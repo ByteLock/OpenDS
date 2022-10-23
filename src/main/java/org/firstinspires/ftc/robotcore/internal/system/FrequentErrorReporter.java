@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.system;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.util.RobotLog;
 
@@ -55,7 +55,7 @@ public class FrequentErrorReporter<T>
         this.value = null;
         }
 
-    public synchronized void aa(@NonNull T value, String tag, String format, Object...args)
+    public synchronized void aa(@NotNull T value, String tag, String format, Object...args)
         {
         Assert.assertNotNull(value);
         if (this.value == null || !this.value.equals(value))
@@ -65,7 +65,7 @@ public class FrequentErrorReporter<T>
             }
         }
 
-    public synchronized void vv(@NonNull T value, String tag, String format, Object...args)
+    public synchronized void vv(@NotNull T value, String tag, String format, Object...args)
         {
         Assert.assertNotNull(value);
         if (this.value == null || !this.value.equals(value))
@@ -75,7 +75,7 @@ public class FrequentErrorReporter<T>
             }
         }
 
-    public synchronized void dd(@NonNull T value, String tag, String format, Object...args)
+    public synchronized void dd(@NotNull T value, String tag, String format, Object...args)
         {
         Assert.assertNotNull(value);
         if (this.value == null || !this.value.equals(value))
@@ -85,7 +85,7 @@ public class FrequentErrorReporter<T>
             }
         }
 
-    public synchronized void ii(@NonNull T value, String tag, String format, Object...args)
+    public synchronized void ii(@NotNull T value, String tag, String format, Object...args)
         {
         Assert.assertNotNull(value);
         if (this.value == null || !this.value.equals(value))
@@ -95,7 +95,7 @@ public class FrequentErrorReporter<T>
             }
         }
 
-    public synchronized void ww(@NonNull T value, String tag, String format, Object...args)
+    public synchronized void ww(@NotNull T value, String tag, String format, Object...args)
         {
         Assert.assertNotNull(value);
         if (this.value == null || !this.value.equals(value))
@@ -105,7 +105,7 @@ public class FrequentErrorReporter<T>
             }
         }
 
-    public synchronized void ee(@NonNull T value, String tag, String format, Object...args)
+    public synchronized void ee(@NotNull T value, String tag, String format, Object...args)
         {
         Assert.assertNotNull(value);
         if (this.value == null || !this.value.equals(value))

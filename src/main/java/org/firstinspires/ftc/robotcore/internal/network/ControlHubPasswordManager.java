@@ -36,7 +36,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.R;
 import com.qualcomm.robotcore.util.Intents;
@@ -85,7 +85,7 @@ public class ControlHubPasswordManager implements PasswordManager {
         return buf;
     }
 
-    private String toSha256(@NonNull String password)
+    private String toSha256(@NotNull String password)
     {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -119,7 +119,7 @@ public class ControlHubPasswordManager implements PasswordManager {
      * @param sendChangeToSystem
      */
     @Override
-    public synchronized void setPassword(@NonNull String password, boolean sendChangeToSystem) throws InvalidNetworkSettingException {
+    public synchronized void setPassword(@NotNull String password, boolean sendChangeToSystem) throws InvalidNetworkSettingException {
         validatePassword(password);
 
         internalSetDevicePassword(password);
@@ -132,7 +132,7 @@ public class ControlHubPasswordManager implements PasswordManager {
         }
     }
 
-    protected void internalSetDevicePassword(@NonNull String password)
+    protected void internalSetDevicePassword(@NotNull String password)
     {
         RobotLog.ii(TAG, "Robot controller password: " + password);
 

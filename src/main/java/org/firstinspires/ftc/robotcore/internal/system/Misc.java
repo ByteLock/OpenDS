@@ -32,7 +32,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.robotcore.internal.system;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 import androidx.annotation.StringRes;
 
 import java.lang.reflect.Array;
@@ -59,20 +59,20 @@ public class Misc
     //----------------------------------------------------------------------------------------------
 
     /** Formats the string using what in C# is called the 'invariant' culture */
-    public static String formatInvariant(@NonNull String format, Object...args)
+    public static String formatInvariant(@NotNull String format, Object...args)
         {
         return String.format(Locale.ROOT, format, args);
         }
-    public static String formatInvariant(@NonNull String format)
+    public static String formatInvariant(@NotNull String format)
         {
         return format;
         }
 
-    public static String formatForUser(@NonNull String format, Object...args)
+    public static String formatForUser(@NotNull String format, Object...args)
         {
         return String.format(Locale.getDefault(), format, args);
         }
-    public static String formatForUser(@NonNull String format)
+    public static String formatForUser(@NotNull String format)
         {
         return format;
         }

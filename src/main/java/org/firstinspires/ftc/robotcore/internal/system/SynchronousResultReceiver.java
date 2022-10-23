@@ -35,7 +35,7 @@ package org.firstinspires.ftc.robotcore.internal.system;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ResultReceiver;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.util.RobotLog;
 
@@ -73,7 +73,7 @@ public abstract class SynchronousResultReceiver<T> extends ResultReceiver {
      * If a Handler that runs on the main Looper was provided to the constructor, this runs on the
      * UI thread. In this case, spawn a worker thread for long-running operations.
      */
-    protected abstract @NonNull T provideResult(int resultCode, Bundle resultData);
+    protected abstract @NotNull T provideResult(int resultCode, Bundle resultData);
 
     /**
      * Synchronously get a result from the ResultReceiver. May be called multiple times to get multiple results.
@@ -84,7 +84,7 @@ public abstract class SynchronousResultReceiver<T> extends ResultReceiver {
      * @throws InterruptedException If the thread is interrupted while waiting
      * @throws TimeoutException If the request times out without receiving a result
      */
-    public final @NonNull T awaitResult(long timeout, TimeUnit timeoutUnit) throws InterruptedException, TimeoutException {
+    public final @NotNull T awaitResult(long timeout, TimeUnit timeoutUnit) throws InterruptedException, TimeoutException {
         T result = resultQueue.poll(timeout, timeoutUnit);
         if (result == null) throw new TimeoutException();
         return result;

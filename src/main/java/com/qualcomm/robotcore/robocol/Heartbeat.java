@@ -30,7 +30,7 @@
 
 package com.qualcomm.robotcore.robocol;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.qualcomm.robotcore.exception.RobotCoreException;
 import com.qualcomm.robotcore.robot.RobotState;
@@ -75,11 +75,11 @@ public class Heartbeat extends RobocolParsableBase  {
   private String     timeZoneId;      /** see {@link TimeZone#getTimeZone}, {@link TimeZone#getID()} */
   private byte[]     timeZoneIdBytes;
 
-  public @NonNull String getTimeZoneId() {
+  public @NotNull String getTimeZoneId() {
     return timeZoneId;
   }
 
-  public void setTimeZoneId(@NonNull String timeZoneId) {
+  public void setTimeZoneId(@NotNull String timeZoneId) {
     if (timeZoneId.getBytes(charset).length > Byte.MAX_VALUE)
       throw Misc.illegalArgumentException("timezone id too long");
     this.timeZoneId = timeZoneId;

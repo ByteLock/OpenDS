@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 package com.qualcomm.robotcore.util;
 
 import android.widget.TextView;
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 import org.firstinspires.ftc.robotcore.external.Predicate;
 
@@ -146,7 +146,7 @@ public class Util {
     return true;
   }
 
-  public static void forEachInFolder(@NonNull File folder, boolean recursive, Predicate<File> action) throws FileNotFoundException {
+  public static void forEachInFolder(@NotNull File folder, boolean recursive, Predicate<File> action) throws FileNotFoundException {
     if (!folder.isDirectory()) throw new FileNotFoundException("not a directory");
     for (File file : folder.listFiles()) {
       if (recursive && file.isDirectory()) forEachInFolder(file, true, action);

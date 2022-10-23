@@ -30,7 +30,7 @@
 
 package com.qualcomm.robotcore.util;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

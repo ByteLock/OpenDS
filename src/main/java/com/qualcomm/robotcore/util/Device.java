@@ -35,8 +35,8 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Build;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.qualcomm.robotcore.hardware.configuration.LynxConstants;
 
@@ -67,7 +67,7 @@ public final class Device {
   @Nullable private static Boolean hasBackButton;
   @Nullable private static LinuxKernelVersion kernelVersion;
   @SuppressWarnings("ConstantConditions")
-  @NonNull private static final UiModeManager uiManager = (UiModeManager) AppUtil.getDefContext().getSystemService(Context.UI_MODE_SERVICE);
+  @NotNull private static final UiModeManager uiManager = (UiModeManager) AppUtil.getDefContext().getSystemService(Context.UI_MODE_SERVICE);
 
   public static LinuxKernelVersion getLinuxKernelVersion() {
     if (kernelVersion == null) {
@@ -214,7 +214,7 @@ public final class Device {
       RobotLog.vv(TAG, "Processed Linux kernel version: " + toString());
     }
 
-    @NonNull @Override public String toString() {
+    @NotNull @Override public String toString() {
       return "" + major + '.' + minor + '.' + patch;
     }
 
